@@ -2,12 +2,14 @@ name: Github Actions
 
 on:
   push:
-    branches: -main
+    branches:
+      - main
 
+# Workflow는 여러개의 jop으로 이루어질 수 있고,
 jobs:
   My-Deploy-job:
     runs-on: ubuntu-latest
-
+    # 하나의 Job은 여러개의 step으로 이루져있음
     steps:
       - name: Hello World 출력하기
-        run: escho "Hello World"
+        run: echo "Hello World"
