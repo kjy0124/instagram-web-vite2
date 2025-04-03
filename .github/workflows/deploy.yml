@@ -3,3 +3,11 @@ name: Github Actions
 on:
   push:
     branches: -main
+
+jobs:
+  My-Deploy-job:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Hello World 출력하기
+        run: escho "Hello World"
