@@ -30,4 +30,5 @@ jobs:
           aws s3 rm --recursive s3://instagram-website
 
       - name: S3에 빌드된 파일 업로드하기
-          run: aws s3 cp ./dist s3://instagram-website/ --recursive
+          run: |
+            aws s3 cp ./dist s3://instagram-website/ --recursive
